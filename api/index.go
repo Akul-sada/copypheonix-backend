@@ -5,7 +5,7 @@ import (
 	"net/http"
 )
 
-// EntryPoint handles all requests
+// Handler is the entry point for Vercel
 func Handler(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "Hello World from Vercel!")
 }
