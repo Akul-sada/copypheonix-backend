@@ -5,8 +5,6 @@ import (
 	"fmt"
 	"log"
 	"net/http"
-
-	"github.com/Akul-sada/copypheonix-backend/handlers"
 	"github.com/julienschmidt/httprouter"
 )
 
@@ -24,6 +22,5 @@ func main() {
 	router := httprouter.New()
 	router.GET("/", Index)
 	router.GET("/hello/:name", Hello)
-	router.POST("/user", handlers.CreateUser)
 	log.Fatal(http.ListenAndServe(":8080", router))
 }
